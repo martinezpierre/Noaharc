@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/PremiereScene.unity
+- path: Assets/Scene/Pierre.unity
   isLoaded: 1
   isActive: 1

@@ -79,7 +79,9 @@
     <Compile Include="Assets\Scripts\AnimalInfo.cs" />
     <Compile Include="Assets\Scripts\AnimalManager.cs" />
     <Compile Include="Assets\Scripts\BodyPartsPosition.cs" />
+    <Compile Include="Assets\Scripts\Buoy.cs" />
     <Compile Include="Assets\Scripts\GameInfos.cs" />
+    <Compile Include="Assets\Scripts\Ship.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

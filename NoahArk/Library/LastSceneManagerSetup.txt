@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/PremiereScene.unity
+- path: Assets/Scene/BateauScene.unity
   isLoaded: 1
   isActive: 1

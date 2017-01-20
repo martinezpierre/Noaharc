@@ -6,6 +6,8 @@ public class Ship : MonoBehaviour {
 
     public static Ship instance;
 
+    List<AnimalInfo> savedAnimals = new List<AnimalInfo>();
+
     private void Awake()
     {
         instance = this;

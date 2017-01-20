@@ -14,12 +14,7 @@ public class AnimalManager : MonoBehaviour {
     {
         instance = this;
     }
-
-    private void Start()
-    {
-        GenerateAnimal(Vector3.zero, MixAnimals(gameInfos.currentAnimals[0], gameInfos.currentAnimals[1]));
-    }
-
+    
     public void GenerateAnimal(Vector3 position)
     {
         int animalIndex = Random.Range(0, gameInfos.currentAnimals.Count);
@@ -38,14 +33,14 @@ public class AnimalManager : MonoBehaviour {
         GameObject body = Instantiate(Resources.Load("Prefab/Bodies/" + animalInfo.body), position, Quaternion.identity) as GameObject;
         body.transform.SetParent(animal.transform);
         GameObject head = Instantiate(Resources.Load("Prefab/Heads/" + animalInfo.head), body.GetComponent<BodyPartsPosition>().headPosition.position, Quaternion.identity) as GameObject;
-        head.transform.SetParent(animal.transform);
+        head.transform.SetParent(body.transform);
         GameObject tail = Instantiate(Resources.Load("Prefab/Tails/" + animalInfo.tail), body.GetComponent<BodyPartsPosition>().tailPosition.position, Quaternion.identity) as GameObject;
-        tail.transform.SetParent(animal.transform);
+        tail.transform.SetParent(body.transform);
 
         foreach (Transform t in body.GetComponent<BodyPartsPosition>().otherPositions)
         {
             GameObject other = Instantiate(Resources.Load("Prefab/Others/" + animalInfo.other), t.position, Quaternion.identity) as GameObject;
-            other.transform.SetParent(animal.transform);
+            other.transform.SetParent(body.transform);
         }
 
         animal.GetComponent<Animal>().animalInfo = animalInfo;

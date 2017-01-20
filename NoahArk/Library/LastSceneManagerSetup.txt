@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/BateauScene.unity
+- path: Assets/Scene/BateauScenePierre.unity
   isLoaded: 1
   isActive: 1
